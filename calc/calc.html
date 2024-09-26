@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="Calculadora" content="calculadora de imc">
+  <meta name="author" content="Hipnos">
+  
+  <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" href="calc.js">
+  <title>IMC - Calculadora</title>
+</head>
+<body>
+  <div class="container">
+   
+     <div id="calc">
+      <form id="form">
+        <h1 id="title">Calculadora de IMC</h1>
+        <div id="inputs">
+          <label for="weight">Peso</label>
+          <div id="input-field">
+            <i class="fa-solid fa-weight-scale"></i>
+            <input type="text" id="weight" autocomplete="off" maxlength="5" required>
+            <span>kg</span>
+          </div>
+        </div>
+        <div id="inputs">
+          <label for="height">Altura </label>
+          <div id="input-field">
+            <i class="fa-solid fa-ruler"></i>
+            <input type="text" id="height" autocomplete="off" maxlength="4" required>
+            <span>m</span>
+          </div>
+        </div>
+        <button id="calculate">Calcular</button>
+      </form>
+      <div id="infos" class="hidden">
+        <div id="result">
+          <div id="imc">
+            <span id="value"></span>
+            <span>IMC</span>
+          </div>
+          <div id="description">
+            <span></span>
+          </div>
+        </div>
+      </div>   
+    </div>
+  </div>
+  <script src="calc.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+  <script>$('#weight').mask('0.000,0', {reverse: true});</script>
+  <script>$('#height').mask('0.00');</script>
+</body>
+</html>
